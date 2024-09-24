@@ -1,0 +1,8 @@
+# Use an official Nginx image to serve the Angular app
+FROM nginx:alpine
+
+# Copy the Angular build output to the Nginx HTML folder
+COPY /dist/my-angular-app /usr/share/nginx/html
+
+# Expose port 80
+EXPOSE 80
